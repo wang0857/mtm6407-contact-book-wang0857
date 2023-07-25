@@ -1,0 +1,108 @@
+
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* =================== */
+/* Font */
+/* =================== */
+
+body > * {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* =================== */
+/* Containers */
+/* =================== */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 425px auto;
+    height: 100vh;
+}
+
+.view-container {
+    padding: 50px 40px;
+    background-color: $blue-bg;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+    .title-container {
+        h1 {
+            margin-bottom: $md;
+        }
+
+        i {
+            font-size: $lg;
+        }
+
+        .back {
+            font-size: $lg;
+            font-weight: $semiBold;
+            margin-left: $sm;
+        }
+    }
+}
+
+/* =================== */
+/* Links */
+/* =================== */
+
+.router-link {
+    color: $white;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &.auto-direct,
+    &.logo {
+        color: $primary-color;
+
+        &:hover,
+        h2:hover {
+            color: $secondary-color;
+            transition: $transition;
+        }
+    }
+}
+
+/* =================== */
+/* Buttons */
+/* =================== */
+
+.btn {
+    border-radius: 50px;
+    padding: $sm $xlg;
+    font-size: $lg;
+    font-weight: $bold;
+
+    &.primary {
+        background-color: $primary-color;
+        color: $dark-bg;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+        color: $dark-bg;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}
