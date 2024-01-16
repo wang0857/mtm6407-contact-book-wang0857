@@ -58,7 +58,7 @@
 <script>    
     export default {
         name: 'ContactDetails',
-        props: ['id', 'latestContacts'], 
+        props: ['id', 'latestContacts'], // Access route parameter, 'id',  in the component using the props option
         emits: ['getDeletedContact', 'updateSavedContacts', 'getSavedContact'],
         data: function() {
             return {
@@ -112,9 +112,9 @@
             }
         },
         watch: {
-            // watch the props that are passed from main.js
+            // Watch the props that are passed from the dynamic router
             // Change the details when clicking on the SideNav
-            latestContacts: function() {
+            id: function() {
                 if(this.latestContacts.find(contact => contact.id == this.id)) {
                     // use '==' because this.id is a string
                     this.foundContact = this.latestContacts.find(contact => contact.id == this.id)
